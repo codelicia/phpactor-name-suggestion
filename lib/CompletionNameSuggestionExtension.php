@@ -8,7 +8,6 @@ use Phpactor\Container\ContainerBuilder;
 use Phpactor\Container\Extension;
 use Phpactor\Extension\Completion\CompletionExtension;
 use Phpactor\MapResolver\Resolver;
-use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
 
 final class CompletionNameSuggestionExtension implements Extension
 {

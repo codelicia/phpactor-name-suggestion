@@ -37,6 +37,24 @@ class CompletionNameSuggestion implements Completor
             $variableName = lcfirst($type->className()->short());
             $variableName = preg_replace(['/Interface$/', '/Abstract$/'], '', $variableName);
 
+            if (preg_match('/Event$/', $variableName)) {
+                yield Suggestion::createWithOptions('$event', [
+                    'short_description' => 'Codelicia/Name Suggestion',
+                    'type'              => Suggestion::TYPE_VARIABLE,
+                ]);
+
+                return;
+            }
+
+            if (preg_match('/Command$/', $variableName)) {
+                yield Suggestion::createWithOptions('$command', [
+                    'short_description' => 'Codelicia/Name Suggestion',
+                    'type'              => Suggestion::TYPE_VARIABLE,
+                ]);
+
+                return;
+            }
+
             yield Suggestion::createWithOptions('$' . lcfirst($variableName), [
                 'short_description' => 'Codelicia/Name Suggestion',
                 'type'              => Suggestion::TYPE_VARIABLE,

@@ -35,7 +35,7 @@ class CompletionNameSuggestion implements Completor
         // TODO: should it complete things for other methods signature as well?
         if ($type !== null && $type->isClass()) {
             $variableName = lcfirst($type->className()->short());
-
+            $variableName = preg_replace(['/Interface$/', '/Abstract$/'], '', $variableName);
 
             yield Suggestion::createWithOptions('$' . lcfirst($variableName), [
                 'short_description' => 'Codelicia/Name Suggestion',

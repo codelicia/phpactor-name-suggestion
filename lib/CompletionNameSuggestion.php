@@ -20,6 +20,7 @@ class CompletionNameSuggestion implements Completor
             ->addSource((string)$source)
             ->build();
 
+        // TODO: should it complete things for other methods signature as well?
         $reflection = $reflector->reflectOffset($source, $byteOffset);
         if ('MethodDeclaration#__construct' !== $reflection->frame()->name()) {
             return;
@@ -32,10 +33,17 @@ class CompletionNameSuggestion implements Completor
             return;
         }
 
-        // TODO: should it complete things for other methods signature as well?
         if ($type !== null && $type->isClass()) {
             $variableName = lcfirst($type->className()->short());
             $variableName = preg_replace(['/Interface$/', '/Abstract$/'], '', $variableName);
+
+            if (preg_match('/Wrapper$/', $variableName)) {
+                $variableWithoutWrapperInName = preg_replace('/Wrapper$/', '', $variableName);
+                yield Suggestion::createWithOptions('$' . lcfirst($variableWithoutWrapperInName), [
+                    'short_description' => 'Codelicia/Name Suggestion',
+                    'type'              => Suggestion::TYPE_VARIABLE,
+                ]);
+            }
 
             if (preg_match('/Event$/', $variableName)) {
                 yield Suggestion::createWithOptions('$event', [

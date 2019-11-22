@@ -42,8 +42,6 @@ class CompletionNameSuggestion implements Completor
                     'short_description' => 'Codelicia/Name Suggestion',
                     'type'              => Suggestion::TYPE_VARIABLE,
                 ]);
-
-                return;
             }
 
             if (preg_match('/Command$/', $variableName)) {
@@ -51,8 +49,6 @@ class CompletionNameSuggestion implements Completor
                     'short_description' => 'Codelicia/Name Suggestion',
                     'type'              => Suggestion::TYPE_VARIABLE,
                 ]);
-
-                return;
             }
 
             yield Suggestion::createWithOptions('$' . lcfirst($variableName), [

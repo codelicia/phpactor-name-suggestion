@@ -11,10 +11,6 @@ use Phpactor\MapResolver\Resolver;
 
 final class CompletionNameSuggestionExtension implements Extension
 {
-    public function __construct()
-    {
-    }
-
     public function load(ContainerBuilder $container): void
     {
         $container->register(

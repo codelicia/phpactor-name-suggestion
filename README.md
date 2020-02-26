@@ -10,3 +10,4 @@ If everything goes right, you can see the following message
 One can also check the installed extensions by running
 `call phpactor#ExtensionList()`
 
+It will give suggestions for parameter names when creating methods.

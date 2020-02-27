@@ -22,7 +22,11 @@ class CompletionNameSuggestion implements Completor
 
         // TODO: should it complete things for other methods signature as well?
         $reflection = $reflector->reflectOffset($source, $byteOffset);
-        if ('MethodDeclaration#__construct' !== $reflection->frame()->name()) {
+
+        $scope      = explode('#', $reflection->frame()->name());
+        $upperScope = $scope[0];
+
+        if ('MethodDeclaration' !== $upperScope) {
             return;
         }
 

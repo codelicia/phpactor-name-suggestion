@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "phpactor/container": "^1.0",
+        "phpactor/container": "^2.0",
         "phpactor/completion-extension": "~0.2",
         "phpactor/worse-reflection-extension": "~0.2",
         "phpactor/source-code-filesystem-extension": "~0.1"

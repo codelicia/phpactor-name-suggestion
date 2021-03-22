@@ -19,7 +19,7 @@
     "require-dev": {
         "roave/security-advisories": "dev-master",
         "phpstan/phpstan": "~0.11.0",
-        "phpunit/phpunit": "~7.0",
+        "phpunit/phpunit": "~9.4",
         "friendsofphp/php-cs-fixer": "~2.18.4"
     },
     "autoload": {

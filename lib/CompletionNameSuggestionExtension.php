@@ -22,7 +22,7 @@ final class CompletionNameSuggestionExtension implements Extension
         );
     }
 
-    public function configure(Resolver $schema)
+    public function configure(Resolver $schema): void
     {
     }
 }

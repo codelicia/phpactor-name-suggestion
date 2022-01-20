@@ -18,7 +18,6 @@
     },
     "require-dev": {
         "roave/security-advisories": "dev-master",
-        "phpstan/phpstan": "~1.4.2",
         "phpunit/phpunit": "~9.4"
     },
     "scripts": {

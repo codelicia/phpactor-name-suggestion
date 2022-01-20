@@ -23,7 +23,10 @@
         "vimeo/psalm": "4.x-dev"
     },
     "scripts": {
-        "test": "vendor/bin/phpcs"
+        "test": [
+	    "vendor/bin/phpcs",
+	    "vendor/bin/psalm"
+	]
     },
     "autoload": {
         "psr-4": {

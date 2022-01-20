@@ -22,6 +22,9 @@
         "phpunit/phpunit": "~9.4",
         "friendsofphp/php-cs-fixer": "~3.4.0"
     },
+    "scripts": {
+        "test": "vendor/bin/phpstan"
+    },
     "autoload": {
         "psr-4": {
             "Codelicia\\Extension\\Suggestion\\": "lib/"

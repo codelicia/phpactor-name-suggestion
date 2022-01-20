@@ -22,7 +22,7 @@
         "doctrine/coding-standard": "9.0.x-dev"
     },
     "scripts": {
-        "test": "vendor/bin/phpstan"
+        "test": "vendor/bin/phpcs"
     },
     "autoload": {
         "psr-4": {

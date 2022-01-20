@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Codelicia\Extension\Suggestion;
 
 use Phpactor\Completion\Core\Completor;

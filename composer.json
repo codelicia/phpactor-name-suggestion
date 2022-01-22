@@ -19,10 +19,14 @@
     "require-dev": {
         "roave/security-advisories": "dev-master",
         "phpunit/phpunit": "~9.4",
-        "doctrine/coding-standard": "9.0.x-dev"
+        "doctrine/coding-standard": "9.0.x-dev",
+        "vimeo/psalm": "4.x-dev"
     },
     "scripts": {
-        "test": "vendor/bin/phpcs"
+        "test": [
+	    "vendor/bin/phpcs",
+	    "vendor/bin/psalm"
+	]
     },
     "autoload": {
         "psr-4": {

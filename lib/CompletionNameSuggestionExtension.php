@@ -20,7 +20,7 @@ final class CompletionNameSuggestionExtension implements Extension
             static function (Container $container): Completor {
                 return new CompletionNameSuggestion();
             },
-            [CompletionExtension::TAG_COMPLETOR => []]
+            [CompletionExtension::TAG_COMPLETOR => []],
         );
     }
 

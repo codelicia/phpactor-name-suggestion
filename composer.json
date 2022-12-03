@@ -39,5 +39,10 @@
     },
     "extra": {
         "phpactor.extension_class": "Codelicia\\Extension\\Suggestion\\CompletionNameSuggestionExtension"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }

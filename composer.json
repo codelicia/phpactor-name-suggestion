@@ -22,19 +22,18 @@
         "vimeo/psalm": "5.6.0"
     },
     "scripts": {
+        "phpcbf": "vendor/bin/phpcbf",
+        "phpcs": "vendor/bin/phpcs",
+        "psalm": "vendor/bin/psalm",
+        "psalter": "vendor/bin/psalter --issues=all",
         "test": [
-	    "vendor/bin/phpcs",
-	    "vendor/bin/psalm"
-	]
+            "@phpcs",
+            "@psalm"
+        ]
     },
     "autoload": {
         "psr-4": {
             "Codelicia\\Extension\\Suggestion\\": "lib/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Codelicia\\Extension\\Suggestion\\Tests\\": "tests/"
         }
     },
     "extra": {

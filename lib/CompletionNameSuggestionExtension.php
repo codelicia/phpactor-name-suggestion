@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Codelicia\Extension\Suggestion;
 
-use Phpactor\Completion\Core\Completor;
 use Phpactor\Container\Container;
 use Phpactor\Container\ContainerBuilder;
 use Phpactor\Container\Extension;
@@ -17,7 +16,7 @@ final class CompletionNameSuggestionExtension implements Extension
     {
         $container->register(
             'name_suggestions.completion',
-            static function (Container $container): Completor {
+            static function (Container $container): CompletionNameSuggestion {
                 return new CompletionNameSuggestion();
             },
             [CompletionExtension::TAG_COMPLETOR => []],

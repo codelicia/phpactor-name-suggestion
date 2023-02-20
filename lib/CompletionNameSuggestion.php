@@ -18,6 +18,7 @@ use function preg_replace;
 
 class CompletionNameSuggestion implements Completor
 {
+    /** @psalm-return Generator<int, Suggestion, mixed, void> */
     public function complete(TextDocument $source, ByteOffset $byteOffset): Generator
     {
         $reflector = ReflectorBuilder::create()

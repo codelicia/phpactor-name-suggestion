@@ -19,7 +19,7 @@
     "require-dev": {
         "roave/security-advisories": "dev-master",
         "doctrine/coding-standard": "12.0.0",
-        "vimeo/psalm": "5.23.0"
+        "vimeo/psalm": "5.24.0"
     },
     "scripts": {
         "phpcbf": "vendor/bin/phpcbf",
